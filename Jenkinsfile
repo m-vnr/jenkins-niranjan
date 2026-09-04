@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Building ${params.APP_NAME}..."
+                echo "Building ${params.APP_NAME} on the DEVELOP branch..."
                 sh 'echo "This file was created during Build" > output.txt'
             }
         }
