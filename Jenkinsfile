@@ -1,3 +1,5 @@
+@Library('jenkins-shared-library') _
+
 pipeline {
     agent any
 
@@ -9,6 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                greet('Niranjan')
                 echo "Building ${params.APP_NAME} on the DEVELOP branch..."
                 sh 'echo "This file was created during Build" > output.txt'
             }
